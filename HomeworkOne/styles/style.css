@@ -7,6 +7,14 @@
     cursor: pointer;
 }
 
+.container {
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* Modal */
+
 .modal, .editModal {
     display: none; 
     position: fixed; 
@@ -18,45 +26,50 @@
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-  }
+}
   
-  .modal-content {
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 40%; 
-  }
+}
 
+input, select {
+    margin-bottom: 10px;
+    width: 200px;
+}
 
-  #archive-table {
-      display: none;
-  }
+textarea {
+    width: 100%;
+    height: 200px;
+}
 
-  .container {
-      margin: auto;
-      width: 90%;
-      margin-top: 20px;
-  }
+/* Tables */
 
-  .head, .head-category {
-      background-color: #999;
-      color: white;
-      font-weight: bold;
-  }
+#archive-table {
+    display: none;
+}
 
-  .body, .category-body {
-      background-color: #e8e9f4
-  }
+.head, .head-category {
+    background-color: #999;
+    color: white;
+    font-weight: bold;
+}
 
-  .head, .body, .head-category {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      margin-bottom: 8px;  
-  }
+.body, .category-body {
+    background-color: #e8e9f4
+}
+
+.head, .body, .head-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;  
+}
 
 .column2, .column3, .column4, .column6 {
     width: 15%;
@@ -99,6 +112,22 @@
     width: 30px;
 }
 
+.head-category .column2,
+#category-body .column2 {
+    width: 30%;
+}
+
+.head-category .column3, .column4, 
+#category-body .column3, .column4 {
+    width: 35%;
+}
+
+.category-table {
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+
 button {
     border-radius: 10%;
 }
@@ -112,24 +141,4 @@ button {
 
 #add-button {
     margin-left: 10px;
-}
-
-.head-category .column2,
-#category-body .column2 {
-    width: 30%;
-}
-
-.head-category .column3, .column4, 
-#category-body .column3, .column4 {
-    width: 35%;
-}
-
-input, select {
-    margin-bottom: 10px;
-    width: 200px;
-}
-
-textarea {
-    width: 100%;
-    height: 200px;
 }

@@ -1,46 +1,46 @@
 import { tasks } from "./data.js";
-import { renderCategoryTable, renderMainTable, renderArchiveTable } from "./index.js";
+import { runApp } from "./index.js";
 
 export function deleteTask(id) {
     const index = tasks.findIndex(task => task.id === id);
+
     tasks.splice(index, 1);
-    renderMainTable();
-    renderCategoryTable();
-    renderArchiveTable();
+
+    runApp();
 }
 
 export function archiveTask(task) {
     task.isActive = false;
-    renderMainTable();
-    renderCategoryTable();
-    renderArchiveTable();
+
+    runApp();
 }
 
 export function unarchiveTask(task) {
     task.isActive = true;
-    renderMainTable();
-    renderCategoryTable();
-    renderArchiveTable();
+    
+    runApp();
 }
 
 export function showModal(input) {
     const editForm = document.getElementById('editForm');
-    editForm.style.display = "block";
     const editName = document.getElementById('editName');
     const editCategory = document.getElementById('editCategory');
     const editContent = document.getElementById('editContent');
+    const editSubmitButtn = document.getElementById('edit-submit-button');
+    
+    editForm.style.display = "block";
     editName.value = input.name;
     editCategory.value = input.category;
     editContent.value = input.content;
-    const editSubmitButtn = document.getElementById('edit-submit-button');
+    
     editSubmitButtn.addEventListener('click', () => {
         const index = tasks.findIndex(task => task.id === input.id);
+
         tasks[index].name = editName.value;
         tasks[index].category = editCategory.value;
         tasks[index].content = editContent.value;
         editForm.style.display = 'none';
-        renderMainTable();
-        renderCategoryTable();
-        renderArchiveTable();
+
+        runApp();
     });
 }

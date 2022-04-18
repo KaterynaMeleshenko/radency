@@ -8,34 +8,31 @@
 </head>
 <body>
     <div class="container">
-    <div class="main-table">
-        <div class="main-header">
-                <div class="head">
-                    <div class="column1"></div>
-                    <div class="column2">Name</div>
-                    <div class="column3">Created</div>
-                    <div class="column4">Category</div>
-                    <div class="column5">Content</div>
-                    <div class="column6">Dates</div>
-                    <div class="column7">
-                        <img src='./assets/archive-white.svg' id="archieve-all-active" class="action-icon">
-                        <img src='./assets/delete-white.svg' id="delete-all-active"class="action-icon">
-                    </div>
+        <!-- Main table -->
+        <div class="main-table">
+            <div class="head">
+                <div class="column1"></div>
+                <div class="column2">Name</div>
+                <div class="column3">Created</div>
+                <div class="column4">Category</div>
+                <div class="column5">Content</div>
+                <div class="column6">Dates</div>
+                <div class="column7">
+                    <img src='./assets/archive-white.svg' id="archieve-all-active" class="action-icon">
+                    <img src='./assets/delete-white.svg' id="delete-all-active"class="action-icon">
                 </div>
-        </div>
-          <div id="main-body">
+            </div>
+            <div id="main-body">
 
-          </div>
-    </div>
-    <div class="buttons">
-       <button id="show-button">Show archive</button>
-       <button id="add-button">Create note</button>  
-    </div>
-    
-    
-    
-    <div id="myModal" class="modal">
-        <div class="modal-content">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="show-button">Show archive</button>
+            <button id="add-button">Create note</button>  
+        </div>
+        <!-- Form to add a new task -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
                 <div class="form">
                     <label for="fname">Name: </label><br>
                     <input type="text" id="fname" name="fname" placeholder="Task Name"><br>
@@ -51,14 +48,12 @@
                     <div class="buttons">
                         <button type="submit" value="Submit" id="submit-add-button" >Submit</button>
                     </div>
-                    
-                    
                 </div>
-        </div> 
-    </div>
-
-    <div id="editForm" class="editModal">
-        <div class="modal-content">
+            </div> 
+        </div>
+        <!-- Form to edit a task -->
+        <div id="editForm" class="editModal">
+            <div class="modal-content">
                 <div class="form">
                     <label for="fname">Name: </label><br>
                     <input type="text" id="editName" name="fname" placeholder="Edit Name"><br>
@@ -75,46 +70,40 @@
                         <button type="submit" value="Submit" id="edit-submit-button" >Submit</button>
                     </div>
                 </div>
-        </div> 
-    </div>
-
-    <div id="archive-table">
-            <div class="main-header">
-                <div class="head">
-                    <div class="column1"></div>
-                    <div class="column2">Name</div>
-                    <div class="column3">Created</div>
-                    <div class="column4">Category</div>
-                    <div class="column5">Content</div>
-                    <div class="column6">Dates</div>
-                    <div class="column7">
-                        <img src='./assets/unarchive-white.svg' id="archieve-all-active" class="action-icon">
-                    </div>
+            </div> 
+        </div>
+        <!-- Archive table -->
+        <div id="archive-table">
+            <div class="head">
+                <div class="column1"></div>
+                <div class="column2">Name</div>
+                <div class="column3">Created</div>
+                <div class="column4">Category</div>
+                <div class="column5">Content</div>
+                <div class="column6">Dates</div>
+                <div class="column7">
+                    <img src='./assets/unarchive-white.svg' id="archieve-all-active" class="action-icon">
                 </div>
-        </div>
-          <div id="archive-body">
+            </div>
+            <div id="archive-body">
 
-          </div>
-        <div class="buttons">
-          <button id="hide-button">Hide Archive</button>  
+            </div>
+            <div class="buttons">
+                <button id="hide-button">Hide Archive</button>  
+            </div>
         </div>
-    </div>
-
-    
-
-    <div class="category-table">
-        <div class="category-header">
-                <div class="head-category">
-                    <div class="column1"></div>
-                    <div class="column2">Note Category</div>
-                    <div class="column3">Active</div>
-                    <div class="column4">Archived</div>
-                </div>
-        </div>
+        <!-- Category table -->
+        <div class="category-table">
+            <div class="head-category">
+                <div class="column1"></div>
+                <div class="column2">Note Category</div>
+                <div class="column3">Active</div>
+                <div class="column4">Archived</div>
+            </div>
             <div id="category-body">
 
             </div>
-    </div>
+        </div>
 </div>
 <script type="module" src="js/index.js"></script>
 <script type="module" src="js/addButton.js"></script>

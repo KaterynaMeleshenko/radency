@@ -1,5 +1,5 @@
 import { tasks } from "./data.js";
-import { renderMainTable, renderCategoryTable } from "./index.js";
+import { runApp} from "./index.js";
 import { getDate } from "./additionalFunctions.js";
 
 let maxId = 6;
@@ -15,18 +15,18 @@ addButton.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-  }
-  if (event.target == editForm) {
+  } if (event.target == editForm) {
     editForm.style.display = "none";
   }
 }
 
 
 export function addNewTask() {
+    maxId += 1;
+
     const nameField = document.querySelector('#fname');
     const categoryField = document.querySelector('#fcategory');
     const contentField = document.querySelector('#fcontent');
-    maxId = maxId + 1;
     const newTask = {
         id: maxId,
         name: nameField.value,
@@ -35,7 +35,7 @@ export function addNewTask() {
         content: contentField.value,
         isActive: true,
     }
+    
     tasks.push(newTask);
-    renderMainTable();
-    renderCategoryTable();
+    runApp();
 }
